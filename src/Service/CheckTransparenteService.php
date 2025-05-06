@@ -45,7 +45,7 @@ class CheckTransparenteService
             $external = $payment->external_reference;
 
             return [
-                'status' => 200,
+                'status' => 201,
                 'qrcode' => $qrcode,
                 'payload' => $payload,
                 'externalReference' => $external,

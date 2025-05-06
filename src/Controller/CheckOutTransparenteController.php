@@ -17,7 +17,7 @@ final class CheckOutTransparenteController extends AbstractController
         $this->ckeckTransparente = $checkTransparenteService;
     }
 
-    #[Route('/pix', name: 'app_check_out_transparente')]
+    #[Route('/pix', methods: ['POST'])]
     public function index(Request $request): JsonResponse
     {
         $data = ($request->headers->get('Content-Type') == 'application/json') ? $request->toArray() : $request->request->all();

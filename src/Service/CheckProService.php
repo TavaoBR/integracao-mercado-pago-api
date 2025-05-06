@@ -38,7 +38,7 @@ class CheckProService
             $init_point = $preference->init_point;
 
             return [
-                'status' => 200,
+                'status' => 201,
                 'init_point' => $init_point,
                 'externalReference' => $external,
                 'message' => 'Pagamento Gerado com sucesso'

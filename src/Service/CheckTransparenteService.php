@@ -18,10 +18,12 @@ class CheckTransparenteService
             ];
         }
 
-        MercadoPagoConfig::setAccessToken($data['MERCADO_PAGO_TOKEN']);
-        $client = new PaymentClient();
+
 
         try {
+            MercadoPagoConfig::setAccessToken($data['MERCADO_PAGO_TOKEN']);
+            $client = new PaymentClient();
+
             $payment = $client->create([
                 "transaction_amount" => $data['amount'],
                 "description" => $data['description_product'],

@@ -82,7 +82,7 @@ Aqui está um exemplo para criação de pagamento com checkOutPro (Link de Pagam
     --header 'Content-Type: application/json' \
     --header 'User-Agent: insomnia/11.0.2' \
     --data '{
-        "MERCADO_PAGO_TOKEN"
+        "MERCADO_PAGO_TOKEN" : "SEU_TOKEN_MERCADO_PAGO"
         "amount": 2.50,
         "description_product": "teste de pagamento",
         "id_product": "123456",

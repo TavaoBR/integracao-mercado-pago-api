@@ -20,10 +20,12 @@ class CheckProService
             ];
         }
 
-        MercadoPagoConfig::setAccessToken($data['MERCADO_PAGO_TOKEN']);
-        $client = new PreferenceClient();
+
 
         try {
+            MercadoPagoConfig::setAccessToken($data['MERCADO_PAGO_TOKEN']);
+            $client = new PreferenceClient();
+
             $preference = $client->create([
                 "items" => [
                     [

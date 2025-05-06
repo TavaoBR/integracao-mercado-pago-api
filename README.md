@@ -122,11 +122,11 @@ Aqui está um exemplo de saida após criação de pagamento com checkOutPro (Lin
 
 ```bash
 {
-    'status' => 201 // status http confirmando criação do pagamento,
-    'message' => 'Pagamento Gerado com sucesso' // mensagem padrão,
-    'init_point' => link externo de pagamento do mercado pago,
-    'externalReference' => referencia externa(importante para o banco de dados, onde saberemos sobre os status do pagamento se foi aprovado ou não),
-    'metadata' => metadata gerado pelo sdk do mercado pago,
+    "status": 201, // Status HTTP confirmando criação do pagamento
+    "message": "Pagamento gerado com sucesso", // Mensagem padrão de sucesso
+    "init_point": "link_externo_de_pagamento", // Link externo de pagamento do Mercado Pago
+    "externalReference": "referencia_externa", // Referência externa (importante para o banco de dados, usada para rastrear o status do pagamento)
+    "metadata": "metadata_gerado_pelo_sdk_do_mercado_pago" // Metadados gerados pelo SDK do Mercado Pago
 }
 
 ```
@@ -135,12 +135,12 @@ Aqui está um exemplo de saida após criação de pagamento com checkOutTranspar
 
 ```bash
 {
-    'status' => 201 // status http confirmando criação do pagamento,
-    'qrcode' => imagem do pix em base64,
-    'payload' => payload do pix para o copia e cola,
-    'externalReference' => referencia externa(importante para o banco de dados, onde saberemos sobre os status do pagamento se foi aprovado ou não),
-    'metadata' => etadata gerado pelo sdk do mercado pago,
-    'message' => 'Pagamento Pix Gerado com Sucesso' // mensagem padrão
+    "status": 201, // Status HTTP confirmando criação do pagamento
+    "qrcode": "imagem_do_pix_em_base64", // Imagem do Pix em formato Base64
+    "payload": "payload_do_pix_para_copia_e_cola", // Payload do Pix para cópia e cola
+    "externalReference": "referencia_externa", // Referência externa (importante para o banco de dados, usada para rastrear o status do pagamento)
+    "metadata": "metadata_gerado_pelo_sdk_do_mercado_pago", // Metadados gerados pelo SDK do Mercado Pago
+    "message": "Pagamento Pix gerado com sucesso" // Mensagem padrão de sucesso
 }
 
 ```

@@ -11,7 +11,7 @@ class CheckProService
 
     public function gerarPagamento(array $data)
     {
-        MercadoPagoConfig::setAccessToken($_ENV['MERCADO_PAGO_TOKEN']);
+        MercadoPagoConfig::setAccessToken($_ENV['MERCADO_PAGO_TOKEN_PRO']);
         $client = new PreferenceClient();
 
         try {

@@ -46,3 +46,20 @@ Este projeto é uma API desenvolvida em **Symfony** com o objetivo de integrar f
    ```bash
      php -S localhost:8000 -t public
    ```
+
+## 🔐 Configuração do Mercado Pago
+
+### Adicione suas chaves de acesso no arquivo .env:
+
+1. Caso esteja usando CheckOutPro
+
+   ```bash
+    MERCADO_PAGO_PUBLIC_KEY_PRO=your_public_key
+    MERCADO_PAGO_TOKEN_PRO=your_access_token
+   ```
+
+2. Caso esteja usando CheckOutTransparente
+   ```bash
+    MERCADO_PAGO_PUBLIC_KEY_TRANSPARENTE=your_public_key
+    MERCADO_PAGO_TOKEN_TRANSPARENTE=your_access_token
+   ```

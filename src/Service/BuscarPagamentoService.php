@@ -10,8 +10,8 @@ class BuscarPagamentoService
     public function buscarIdPagamento($idPagamento)
     {
 
-        $token = !empty($_ENV['MERCADO_PAGO_TOKEN'])
-            ? $_ENV['MERCADO_PAGO_TOKEN']
+        $token = !empty($_ENV['MERCADO_PAGO_TOKEN_PRO'])
+            ? $_ENV['MERCADO_PAGO_TOKEN_PRO']
             : $_ENV['MERCADO_PAGO_TOKEN_TRANSPARENTE'];
 
         MercadoPagoConfig::setAccessToken($_ENV['MERCADO_PAGO_TOKEN']);

@@ -54,21 +54,15 @@ Este projeto é uma API desenvolvida em **Symfony** com o objetivo de integrar f
 
 ## 🔐 Configuração do Mercado Pago
 
-### Adicione suas chaves de acesso no arquivo .env:
+### Gere as chaves do seu projeto mercado pago:
+
+Acesse o site mercado pago developers, gere as chaves para produção e homologação
+
+```bash
+ https://www.mercadopago.com.br/developers
+```
 
 1. Caso esteja usando CheckOutPro
-
-   ```bash
-    MERCADO_PAGO_PUBLIC_KEY_PRO=your_public_key
-    MERCADO_PAGO_TOKEN_PRO=your_access_token
-   ```
-
-2. Caso esteja usando CheckOutTransparente
-
-   ```bash
-    MERCADO_PAGO_PUBLIC_KEY_TRANSPARENTE=your_public_key
-    MERCADO_PAGO_TOKEN_TRANSPARENTE=your_access_token
-   ```
 
 ## 📌 Endpoints (em desenvolvimento)
 
@@ -88,6 +82,7 @@ Aqui está um exemplo para criação de pagamento com checkOutPro (Link de Pagam
     --header 'Content-Type: application/json' \
     --header 'User-Agent: insomnia/11.0.2' \
     --data '{
+        "MERCADO_PAGO_TOKEN"
         "amount": 2.50,
         "description_product": "teste de pagamento",
         "id_product": "123456",
@@ -106,6 +101,7 @@ Aqui está um exemplo para criação de pagamento com checkOutTransparente (Meto
     --header 'Content-Type: application/json' \
     --header 'User-Agent: insomnia/11.0.2' \
     --data '{
+        "MERCADO_PAGO_TOKEN": "SEU_TOKEN_MERCADO_PAGO"
         "amount": 2.50,
         "description_product": "teste de pagamento",
         "fisrt_name": "teste 1",
@@ -118,7 +114,8 @@ Aqui está um exemplo para criação de pagamento com checkOutTransparente (Meto
 ```
 
 📝 Exemplo de Saida
-Aqui está um exemplo de saida após criação de pagamento com checkOutPro (Link de Pagamento):
+
+1. Aqui está um exemplo de saida após criação de pagamento com checkOutPro (Link de Pagamento):
 
 ```bash
 {
@@ -131,7 +128,7 @@ Aqui está um exemplo de saida após criação de pagamento com checkOutPro (Lin
 
 ```
 
-Aqui está um exemplo de saida após criação de pagamento com checkOutTransparente (Metodo Pix):
+2. Aqui está um exemplo de saida após criação de pagamento com checkOutTransparente (Metodo Pix):
 
 ```bash
 {

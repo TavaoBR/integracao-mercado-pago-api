@@ -9,7 +9,16 @@ class CheckTransparenteService
 {
     public function pix(array $data)
     {
-        MercadoPagoConfig::setAccessToken($_ENV['MERCADO_PAGO_TOKEN_TRANSPARENTE']);
+
+        if (!isset($data['MERCADO_PAGO_TOKEN']) || $data['MERCADO_PAGO_TOKEN'] === null || $data['MERCADO_PAGO_TOKEN'] === "") {
+            return [
+                "status" => 400,
+                "error" => "missing_token",
+                "message" => "É necessário ter gerado um token válido e não vazio."
+            ];
+        }
+
+        MercadoPagoConfig::setAccessToken($data['MERCADO_PAGO_TOKEN']);
         $client = new PaymentClient();
 
         try {
@@ -49,7 +58,7 @@ class CheckTransparenteService
                 'qrcode' => $qrcode,
                 'payload' => $payload,
                 'externalReference' => $external,
-                'metadata' => $payment->metadata,
+                'metadata' => $payment,
                 'message' => 'Pagamento Pix Gerado com Sucesso'
             ];
         } catch (\Exception $e) {

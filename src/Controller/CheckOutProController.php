@@ -18,7 +18,7 @@ final class CheckOutProController extends AbstractController
         $this->checkPro = $checkProService;
     }
 
-    #[Route('/', methods: ['POST'])]
+    #[Route('/link-pagamento', methods: ['POST'])]
     public function index(Request $request): JsonResponse
     {
         $data = ($request->headers->get('Content-Type') == 'application/json') ? $request->toArray() : $request->request->all();

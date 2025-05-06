@@ -42,7 +42,7 @@ class CheckProService
                 'message' => 'Pagamento Gerado com sucesso',
                 'init_point' => $init_point,
                 'externalReference' => $external,
-                'metdata' => $preference,
+                'metadata' => $preference,
             ];
         } catch (\Exception $e) {
             return [

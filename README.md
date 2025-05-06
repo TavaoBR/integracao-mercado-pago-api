@@ -96,14 +96,14 @@ Aqui está um exemplo de payload para criação de pagamento com checkOutTranspa
 
 ```bash
     {
-    "amount": 2.50,
-    "description_product": "teste de pagamento" //descrição do produto,
-    "fisrt_name": "teste 1" //primeiro nome do pagador,
-    "last_name": "teste 02" //sobrenome do pagador,
-    "email": "teste@gmail.com" //e-mail do pagador,
-    "cpf": "12345678909" //cpf do pagador,
-    "id_product": "123456" //Id do produto,
-    "name_product": "Camisa pirata do flamengo" // nome do produto
+        "amount": 2.50,
+        "description_product": "teste de pagamento" //descrição do produto,
+        "fisrt_name": "teste 1" //primeiro nome do pagador,
+        "last_name": "teste 02" //sobrenome do pagador,
+        "email": "teste@gmail.com" //e-mail do pagador,
+        "cpf": "12345678909" //cpf do pagador,
+        "id_product": "123456" //Id do produto,
+        "name_product": "Camisa pirata do flamengo" // nome do produto
     }
 ```
 
@@ -112,11 +112,11 @@ Aqui está um exemplo de saida após criação de pagamento com checkOutPro (Lin
 
 ```bash
 {
- 'status' => 201 // status http confirmando criação do pagamento,
- 'message' => 'Pagamento Gerado com sucesso' // mensagem padrão,
- 'init_point' => link externo de pagamento do mercado pago,
- 'externalReference' => referencia externa(importante para o banco de dados, onde saberemos sobre os status do pagamento se foi aprovado ou não),
- 'metadata' => metadata gerado pelo sdk do mercado pago,
+    'status' => 201 // status http confirmando criação do pagamento,
+    'message' => 'Pagamento Gerado com sucesso' // mensagem padrão,
+    'init_point' => link externo de pagamento do mercado pago,
+    'externalReference' => referencia externa(importante para o banco de dados, onde saberemos sobre os status do pagamento se foi aprovado ou não),
+    'metadata' => metadata gerado pelo sdk do mercado pago,
 }
 
 ```
@@ -125,12 +125,12 @@ Aqui está um exemplo de saida após criação de pagamento com checkOutTranspar
 
 ```bash
 {
- 'status' => 201 // status http confirmando criação do pagamento,
- 'qrcode' => imagem do pix em base64,
- 'payload' => payload do pix para o copia e cola,
- 'externalReference' => referencia externa(importante para o banco de dados, onde saberemos sobre os status do pagamento se foi aprovado ou não),
- 'metadata' => etadata gerado pelo sdk do mercado pago,
- 'message' => 'Pagamento Pix Gerado com Sucesso' // mensagem padrão
+    'status' => 201 // status http confirmando criação do pagamento,
+    'qrcode' => imagem do pix em base64,
+    'payload' => payload do pix para o copia e cola,
+    'externalReference' => referencia externa(importante para o banco de dados, onde saberemos sobre os status do pagamento se foi aprovado ou não),
+    'metadata' => etadata gerado pelo sdk do mercado pago,
+    'message' => 'Pagamento Pix Gerado com Sucesso' // mensagem padrão
 }
 
 ```

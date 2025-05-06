@@ -111,20 +111,26 @@ Aqui está um exemplo de payload para criação de pagamento com checkOutTranspa
 Aqui está um exemplo de saida após criação de pagamento com checkOutPro (Link de Pagamento):
 
 ```bash
+{
  'status' => 201 // status http confirmando criação do pagamento,
  'message' => 'Pagamento Gerado com sucesso' // mensagem padrão,
  'init_point' => link externo de pagamento do mercado pago,
  'externalReference' => referencia externa(importante para o banco de dados, onde saberemos sobre os status do pagamento se foi aprovado ou não),
  'metadata' => metadata gerado pelo sdk do mercado pago,
+}
+
 ```
 
 Aqui está um exemplo de saida após criação de pagamento com checkOutTransparente (Metodo Pix):
 
 ```bash
+{
  'status' => 201 // status http confirmando criação do pagamento,
  'qrcode' => imagem do pix em base64,
  'payload' => payload do pix para o copia e cola,
  'externalReference' => referencia externa(importante para o banco de dados, onde saberemos sobre os status do pagamento se foi aprovado ou não),
  'metadata' => etadata gerado pelo sdk do mercado pago,
  'message' => 'Pagamento Pix Gerado com Sucesso' // mensagem padrão
+}
+
 ```

@@ -27,7 +27,7 @@ class CheckTransparenteService
                     ]
                 ],
 
-                "additiona_info" => [
+                "additional_info" => [
                     "items" => [[
                         "id" => $data['id_product'],
                         "title" => $data['name_product'],

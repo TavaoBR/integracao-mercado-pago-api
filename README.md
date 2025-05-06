@@ -33,14 +33,7 @@ Este projeto é uma API desenvolvida em **Symfony** com o objetivo de integrar f
    composer install
    ```
 
-3. Configure as variáveis de ambiente:
-   Copie o arquivo .env.dev e configure as chaves do Mercado Pago:
-
-   ```bash
-    cp .env.dev .env
-   ```
-
-4. Execute o servidor de desenvolvimento:
+3. Execute o servidor de desenvolvimento:
 
    ```bash
    symfony server:start

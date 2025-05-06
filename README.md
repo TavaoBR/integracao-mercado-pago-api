@@ -1,6 +1,6 @@
 # Integração Mercado Pago API
 
-Este projeto é uma API desenvolvida em **Symfony** com o objetivo de integrar funcionalidades do **Mercado Pago**. Ele serve como base para aplicações que precisam realizar pagamentos, assinaturas, ou outras interações com a plataforma do Mercado Pago.
+Este projeto é uma API desenvolvida em **Symfony** com o objetivo de integrar funcionalidades do **Mercado Pago**. Ele serve como base para aplicações que precisam realizar pagamentos com a plataforma do Mercado Pago.
 
 ## 📦 Tecnologias Utilizadas
 

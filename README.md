@@ -78,35 +78,43 @@ Aqui estão os endpoints criados na API para integração com o Mercado Pago. To
 *POST /api/check-transparente/pix
 \*POST /api/check-transparente/cartao (Em desenvolvimento)
 
-📝 Exemplo de Payload para Criação de Pagamento
+📝 Exemplo de CURL para Criação de Pagamento
 
-Aqui está um exemplo de payload para criação de pagamento com checkOutPro (Link de Pagamento):
+Aqui está um exemplo para criação de pagamento com checkOutPro (Link de Pagamento):
 
 ```bash
-    {
+    curl --request POST \
+    --url http://localhost:8000/api/check-pro/link-pagamento \
+    --header 'Content-Type: application/json' \
+    --header 'User-Agent: insomnia/11.0.2' \
+    --data '{
         "amount": 2.50,
-        "description_product": "teste de pagamento" //descrição do produto,
-        "id_product": "123456" //Id do produto,
-        "name_product": "Camisa pirata do flamengo" // nome do produto,
-        "url_success": "https://test.com/success" //Colocar sua url de sucesso,
-        "url_failure": "https://test.com/failure" //Colocar sua url de falha,
-        "url_pending": "https://test.com/pending" //Colocar sua url de pendente
-    }
+        "description_product": "teste de pagamento",
+        "id_product": "123456",
+        "name_product": "Camisa pirata do flamengo",
+        "url_success": "https://test.com/success",
+        "url_failure": "https://test.com/failure",
+        "url_pending": "https://test.com/pending"
+    }'
 ```
 
-Aqui está um exemplo de payload para criação de pagamento com checkOutTransparente (Metodo Pix):
+Aqui está um exemplo para criação de pagamento com checkOutTransparente (Metodo Pix):
 
 ```bash
-    {
+    curl --request POST \
+    --url http://localhost:8000/api/check-transparente/pix \
+    --header 'Content-Type: application/json' \
+    --header 'User-Agent: insomnia/11.0.2' \
+    --data '{
         "amount": 2.50,
-        "description_product": "teste de pagamento" //descrição do produto,
-        "fisrt_name": "teste 1" //primeiro nome do pagador,
-        "last_name": "teste 02" //sobrenome do pagador,
-        "email": "teste@gmail.com" //e-mail do pagador,
-        "cpf": "12345678909" //cpf do pagador,
-        "id_product": "123456" //Id do produto,
-        "name_product": "Camisa pirata do flamengo" // nome do produto
-    }
+        "description_product": "teste de pagamento",
+        "fisrt_name": "teste 1",
+        "last_name": "teste 02",
+        "email": "jamesgustavo133@gmail.com",
+        "cpf": "08162898590",
+        "id_product": "123456",
+        "name_product": "Camisa pirata do flamengo"
+    }'
 ```
 
 📝 Exemplo de Saida

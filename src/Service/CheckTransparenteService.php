@@ -62,7 +62,6 @@ class CheckTransparenteService
     }
     public function cartao() {}
 
-
     function generateGUID()
     {
         if (function_exists('com_create_guid') === true) {
